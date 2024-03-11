@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chọn khách sạn và đặt phòng</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      margin-top: 230px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    header {
+  background-color: #5c71e3;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+    .s1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      padding: 20px;
+    }
+    .hotel {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 30%;
+      margin: 10px;
+    }
+    .hotel img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    footer {
+      background-color: #d84828;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+    }
+  </style>
+  <script>
+    function handleSubmit() {
+      var name = document.getElementById("name").value;
+      var checkIn = document.getElementById("check-in").value;
+      var checkOut = document.getElementById("check-out").value;
+      var hotel = document.getElementById("hotel").value;
+      var message = "Tên: " + name + "\nNgày đến: " + checkIn + "\nNgày đi: " + checkOut + "\nKhách sạn: " + hotel;
+
+      alert(message);
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Đặt phòng khách sạn</h1>
+  </header>
+  <div>
+    <h2>Chọn phòng và điền thông tin</h2>
+    <form onsubmit="handleSubmit()">
+      <label for="name">Tên người đặt:</label>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="check-in">Ngày đến:</label>
+      <input type="date" id="check-in" name="check-in" required><br>
+
+      <label for="check-out">Ngày đi:</label>
+      <input type="date" id="check-out" name="check-out" required><br>
+
+      <label for="hotel">Chọn khách sạn:</label>
+      <select id="hotel" name="hotel" required>
+        <option value="">-- Chọn khách sạn --</option>
+        <option value="Khách sạn ECy">Khách sạn ECy</option>
+        <option value="Khách sạn BTK">Khách sạn BTK</option>
+        <option value="Khách sạn NKs">Khách sạn NKs</option>
+        <option value="Khách sạn KSn">Khách sạn KSn</option>
+        <option value="Khách sạn KXSn">Khách sạn KXSn</option>
+      </select><br>
+
+      <input type="submit" value="Đặt phòng">
+    </form>
+  </div>
+  <div class="s1">
+    <div class="hotel">
+      <img src="ks1.jpg" alt="Hình ảnh khách sạn 1">
+      <h2>Khách sạn ECy</h2>
+      <p>Địa chỉ: Hà Nội</p>
+      <p>Mô tả: Một khách sạn sang trọng với các tiện nghi hiện đại và phòng ngủ thoải mái.</p>
+    </div>
+
+    <div class="hotel">
+      <img src="ks2.jpg" alt="Hình ảnh khách sạn 2">
+      <h2>Khách sạn BTK</h2>
+      <p>Địa chỉ: Đà Nẵng</p>
+      <p>Mô tả: Một khách sạn tiện nghi với không gian thoáng đãng và phòng tắm riêng.</p>
+    </div>
+
+    <div class="hotel">
+      <img src="ks3.jpg" alt="Hình ảnh khách sạn 3">
+      <h2>Khách sạn NKs</h2>
+      <p>Địa chỉ: Hà Giang</p>
+      <p>Mô tả: Một khách sạn ấm cúng với không gian xanh và nhân viên phục vụ tận tâm.</p>
+    </div>
+
+    <div class="hotel">
+      <img src="ks4.jpg" alt="Hình ảnh khách sạn 4">
+      <h2>Khách sạn KSn</h2>
+      <p>Địa chỉ: Nha Trang</p>
+      <p>Mô tả: Một khách sạn ven biển với cảnh quan tuyệt đẹp và các hoạt động giải trí thú vị.</p>
+    </div>
+
+    <div class="hotel">
+      <img src="ks5.jpg" alt="Hình ảnh khách sạn 5">
+      <h2>Khách sạn KXSn</h2>
+      <p>Địa chỉ: Đà Lạt</p>
+      <p>Mô tả: Một khách sạn nằm trong khu vườn với khung cảnh lãng mạn và dịch vụ chuyên nghiệp.</p>
+    </div>
+  </div>
+  <footer>
+    &copy; 2024 Datphongkhachsan.com. All rights reserved.
+  </footer>
+</body>
+</html>
